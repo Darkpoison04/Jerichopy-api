@@ -24,7 +24,7 @@
         },
         "anime":{
           "name": "animu",
-          "filters": {"sentence": "sentence", "character" : "character" , "anime": "anime"},
+          "filters": {"link": "link" ,"sentence": "sentence", "character" : "character" , "anime": "anime"},
           "endpoint": {
             "pat": "pat",
             "hug": "hug",
