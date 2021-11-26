@@ -1,0 +1,22 @@
+{
+  "BaseUrls": {
+    "SomeRandomApi": "https://some-random-api.ml"
+  },
+  "OptionCaches": {
+    "SomeRandomApi": {
+      "category": {
+        "animals": {
+          "name": "animal",
+          "filters": { "fact": "fact", "image": "image" },
+          "endpoint": {
+            "bird": "birb",
+            "dog": "dog",
+            "cat": "cat"
+          },
+          "parameters": null,
+          "ignoreResponse": null
+        }
+      }
+    }
+  }
+}
