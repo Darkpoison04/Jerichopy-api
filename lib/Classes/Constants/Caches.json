@@ -9,13 +9,45 @@
           "name": "animal",
           "filters": { "fact": "fact", "image": "image" },
           "endpoint": {
-            "bird": "birb",
             "dog": "dog",
-            "cat": "cat"
+            "cat": "cat",
+            "panda": "panda",
+            "fox": "fox",
+            "red panda": "red_panda",
+            "koala": "koala",
+            "bird": "birb",
+            "raccoon": "raccoon",
+            "kangaroo": "kangaroo"
           },
           "parameters": null,
           "ignoreResponse": null
+        },
+        "anime":{
+          "name": "animu",
+          "filters": {"sentence": "sentence", "character" : "character" , "anime": "anime"},
+          "endpoint": {
+            "pat": "pat",
+            "hug": "hug",
+            "wink": "wink",
+            "quote": "quote"
+          },
+          "parameters": null,
+          "ignoreResponse": null
+        },
+        "overlays":{
+          "name":"canvas",
+          "filters": {},
+          "endpoint":{
+            "gay":"gay",
+            "glass": "glass",
+            "wasted": "wasted",
+            "passed": "passed",
+            "jail": "jail",
+            "comrade": "comrade",
+            "triggered": "triggered"
+            }
         }
+        
       }
     }
   }
