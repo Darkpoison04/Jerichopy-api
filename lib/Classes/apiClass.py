@@ -26,7 +26,7 @@ class SomeRandomApi:
         JsonResponse = None
         if APIOptions and "parameters" in APIOptions and APIOptions["parameters"] and "parameters" in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
             for param in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
-                if self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"][param] and (param.lower() not in APIOptions["parameters"] or (param.lower() in APIOptions["parameters"] and not APIOptions["parameters"][param.lower()])):
+                if self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"][param.lower()] and (param.lower() not in APIOptions["parameters"] or (param.lower() in APIOptions["parameters"] and not APIOptions["parameters"][param.lower()])):
                     raise RuntimeError(
                         param + " is Required by SomeRandomApi on Url -> " + RequestUrl)
             rawResponse = requests.get(
