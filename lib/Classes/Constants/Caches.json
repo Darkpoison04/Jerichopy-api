@@ -20,7 +20,8 @@
             "kangaroo": "kangaroo"
           },
           "parameters": null,
-          "ignoreResponse": null
+          "ignoreResponse": null,
+          "ignoreCategory": null
         },
         "anime": {
           "name": "animu",
@@ -37,7 +38,8 @@
             "quote": "quote"
           },
           "parameters": null,
-          "ignoreResponse": null
+          "ignoreResponse": null,
+          "ignoreCategory": null
         },
         "overlays": {
           "name": "canvas",
@@ -54,7 +56,9 @@
           "parameters": {
             "avatar": null,
             "key": "true"
-          }
+          },
+          "ignoreResponse": null,
+          "ignoreCategory": null
         }
       }
     }

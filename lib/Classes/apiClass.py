@@ -19,10 +19,8 @@ class SomeRandomApi:
         elif not APIOptions:
             APIOptions = self.APIOptions
 
-        RequestUrl = self.BaseUrl + '/' + \
-            self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower()]["name"] + '/' + \
-            self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()
-                                                                            ]["endpoint"][APIOptions['endpoint'].lower().lower()]
+        RequestUrl = self.BaseUrl + ('/' + self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["name"] if "ignoreCategory" not in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] or ("ignoreCategory" not in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and not self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["ignoreCategory"]) else "") + '/' + \
+            self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["endpoint"][APIOptions['endpoint'].lower().lower()]
         rawResponse = None
         JsonResponse = None
         if APIOptions and "parameters" in APIOptions and "parameters" in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
