@@ -5,8 +5,9 @@ x = SomeRandomApi()
 y = x.random({
     "category": "misc",
     "endpoint": "lyrics",
-    "parameters":{
-            "title" :"sakhiyaan"
-          }
+    "parameters": {
+        "title": "sakhiyaan"
+    },
+    "filters": ["title"]
 })
 print(y)

@@ -20,12 +20,13 @@ class SomeRandomApi:
             APIOptions = self.APIOptions
 
         RequestUrl = self.BaseUrl + ('/' + self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["name"] if "ignoreCategory" not in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] or ("ignoreCategory" not in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and not self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["ignoreCategory"]) else "") + '/' + \
-            self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["endpoint"][APIOptions['endpoint'].lower()]
+            self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower(
+            )]["endpoint"][APIOptions['endpoint'].lower()]
         rawResponse = None
         JsonResponse = None
-        if APIOptions and "parameters" in APIOptions and "parameters" in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
+        if APIOptions and "parameters" in APIOptions and APIOptions["parameters"] and "parameters" in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
             for param in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
-                if self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"][param] and not APIOptions[param]:
+                if self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"][param] and (param.lower() not in APIOptions["parameters"] or (param.lower() in APIOptions["parameters"] and not APIOptions["parameters"][param.lower()])):
                     raise RuntimeError(
                         param + " is Required by SomeRandomApi on Url -> " + RequestUrl)
             rawResponse = requests.get(

@@ -7,7 +7,7 @@
       "category": {
         "animals": {
           "name": "animal",
-          "filters": { "fact": "fact", "image": "image" },
+          "filters": ["fact", "image"],
           "endpoint": {
             "dog": "dog",
             "cat": "cat",
@@ -25,12 +25,7 @@
         },
         "anime": {
           "name": "animu",
-          "filters": {
-            "link": "link",
-            "sentence": "sentence",
-            "character": "character",
-            "anime": "anime"
-          },
+          "filters": ["link", "sentence", "character", "anime"],
           "endpoint": {
             "pat": "pat",
             "hug": "hug",
@@ -43,7 +38,7 @@
         },
         "overlays": {
           "name": "canvas",
-          "filters": {},
+          "filters": null,
           "endpoint": {
             "gay": "gay",
             "glass": "glass",
@@ -60,16 +55,16 @@
           "ignoreResponse": null,
           "ignoreCategory": null
         },
-        "misc":{
+        "misc": {
           "name": "misc",
-          "filters": {"title": "title", "author": "author" ,"lyrics": "lyrics","thumbnail":"thumbnail"},
-          "endpoint":{
+          "filters": ["title", "author", "lyrics", "thumbnail"],
+          "endpoint": {
             "lyrics": "lyrics"
           },
-          "parameters":{
-            "title" :"title"
+          "parameters": {
+            "title": "true"
           },
-          "ignoreCategory": "True",
+          "ignoreCategory": "true",
           "ignoreResponse": null
         }
       }
