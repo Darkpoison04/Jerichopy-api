@@ -17,7 +17,7 @@ class SomeRandomApi:
             raise RuntimeError(
                 "API-Options are Null/None for API Fetch Request")
         elif not APIOptions:
-            APIOptions = self.APIOptions   
+            APIOptions = self.APIOptions
 
         RequestUrl = self.BaseUrl + '/' + \
             self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower()]["name"] + '/' + \
@@ -25,7 +25,7 @@ class SomeRandomApi:
                                                                             ]["endpoint"][APIOptions['endpoint'].lower().lower()]
         rawResponse = None
         JsonResponse = None
-        if APIOptions and "parameters" in APIOptions:
+        if APIOptions and "parameters" in APIOptions and "parameters" in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
             for param in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"]:
                 if self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["parameters"][param] and not APIOptions[param]:
                     raise RuntimeError(
@@ -51,7 +51,7 @@ class SomeRandomApi:
         elif not APIOptions:
             APIOptions = self.APIOptions
         RawOutput = self.raw(APIOptions)
-        if RawOutput and "json" in RawOutput and RawOutput["json"] and APIOptions and "filters" in APIOptions and (type(APIOptions['filters']) is list or type(APIOptions['filters']) is tuple):
+        if RawOutput and "json" in RawOutput and RawOutput["json"] and APIOptions and "filters" in APIOptions and (type(APIOptions['filters']) is list or type(APIOptions['filters']) is tuple) and "filters" in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()] and self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["filters"]:
             FetchOutput = {}
             for filter in APIOptions['filters']:
                 if filter.lower() in self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["filters"]:
