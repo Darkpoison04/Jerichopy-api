@@ -59,6 +59,18 @@
           },
           "ignoreResponse": null,
           "ignoreCategory": null
+        },
+        "misc":{
+          "name": "misc",
+          "filters": {"title": "title", "author": "author" ,"lyrics": "lyrics","thumbnail":"thumbnail"},
+          "endpoint":{
+            "lyrics": "lyrics"
+          },
+          "parameters":{
+            "title" :"title"
+          },
+          "ignoreCategory": "True",
+          "ignoreResponse": null
         }
       }
     }
