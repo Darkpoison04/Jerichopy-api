@@ -20,9 +20,9 @@ class SomeRandomApi:
             APIOptions = self.APIOptions   
 
         RequestUrl = self.BaseUrl + '/' + \
-            self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower().lower()]["name"] + '/' + \
+            self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["name"] + '/' + \
             self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()
-                                                                            ]["endpoint"][APIOptions['endpoint'].lower().lower()]
+                                                                            ]["endpoint"][APIOptions['endpoint'].lower()]
         rawResponse = None
         JsonResponse = None
         if APIOptions and "parameters" in APIOptions:
