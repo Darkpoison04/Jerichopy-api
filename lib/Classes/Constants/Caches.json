@@ -1,6 +1,7 @@
 {
   "BaseUrls": {
-    "SomeRandomApi": "https://some-random-api.ml"
+    "SomeRandomApi": "https://some-random-api.ml",
+    "VacefromApi":"https://vacefron.nl/api"
   },
   "OptionCaches": {
     "SomeRandomApi": {
@@ -57,9 +58,12 @@
         },
         "misc": {
           "name": "misc",
-          "filters": ["title", "author", "lyrics", "thumbnail"],
+          "filters": ["title", "author", "lyrics", "thumbnail","joke"],
           "endpoint": {
-            "lyrics": "lyrics"
+            "lyrics": "lyrics",
+            "joke":"joke",
+            "bottoken":"bottoken",
+            "mc":"mc"
           },
           "parameters": {
             "title": "true"
