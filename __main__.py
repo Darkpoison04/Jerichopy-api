@@ -1,9 +1,8 @@
 from lib import SomeRandomApi
 
-
 x = SomeRandomApi()
-y = x.random({
-    "category": "Animals",
-    "filters": ["image"]
+y = x.raw({
+    "category":"animals",
+    'endpoint': "dog"
 })
 print(y)
