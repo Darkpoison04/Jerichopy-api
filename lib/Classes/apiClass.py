@@ -17,7 +17,7 @@ class SomeRandomApi:
             raise RuntimeError(
                 "API-Options are Null/None for API Fetch Request")
         elif not APIOptions:
-            APIOptions = self.APIOptions   
+            APIOptions = self.APIOptions
 
         RequestUrl = self.BaseUrl + '/' + \
             self.CacheJsonData["OptionCaches"]["SomeRandomApi"]["category"][APIOptions['category'].lower()]["name"] + '/' + \
