@@ -1,7 +1,7 @@
 {
   "BaseUrls": {
     "SomeRandomApi": "https://some-random-api.ml",
-    "VacefromApi":"https://vacefron.nl/api"
+    "VacefronApi": "https://vacefron.nl/api"
   },
   "OptionCaches": {
     "SomeRandomApi": {
@@ -58,15 +58,39 @@
         },
         "misc": {
           "name": "misc",
-          "filters": ["title", "author", "lyrics", "thumbnail","joke"],
+          "filters": [
+            "title",
+            "author",
+            "lyrics",
+            "thumbnail",
+            "joke",
+            "name",
+            "id",
+            "type",
+            "species",
+            "abilities",
+            "height",
+            "weight",
+            "base_experience",
+            "gender",
+            "egg_groups",
+            "stats",
+            "family",
+            "sprites",
+            "description",
+            "generation"
+          ],
           "endpoint": {
             "lyrics": "lyrics",
-            "joke":"joke",
-            "bottoken":"bottoken",
-            "mc":"mc"
+            "joke": "joke",
+            "bottoken": "bottoken",
+            "mc": "mc",
+            "pokedex": "pokedex"
           },
           "parameters": {
-            "title": "true"
+            "title": "true",
+            "key": "key",
+            "pokemon": "pokemon"
           },
           "ignoreCategory": "true",
           "ignoreResponse": null

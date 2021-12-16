@@ -1,13 +1,4 @@
 from lib import SomeRandomApi
 
-
-x = SomeRandomApi()
-y = x.random({
-    "category": "misc",
-    "endpoint": "lyrics",
-    "parameters": {
-        "title": "sakhiyaan"
-    },
-    "filters": ["title"]
-})
+y = SomeRandomApi().raw({"category": "misc", "endpoint": "joke"})
 print(y)

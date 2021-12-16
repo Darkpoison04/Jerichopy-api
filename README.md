@@ -5,9 +5,7 @@
 
 #### pip install Jerichopy-api
 
-
-Sync Example
---------------
+## Sync Example
 
 ```Python
 from Jerichopy-api import SomeRandomApi
@@ -21,8 +19,7 @@ print(y)
 
 ```
 
-Async example
---------------
+## Async example
 
 ```Python
 
